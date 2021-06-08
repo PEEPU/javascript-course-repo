@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+</head>
+<body>
+    <form>
+    <input type="radio" name="timezone" value="est"> Eastern Standard Time <br>
+    <input type="radio" name="timezone" value="cst"> Central Standard Time <br>
+    <input type="radio" name="timezone" value="mst"> Mountain Standard Time <br>
+    <input type="radio" name="timezone" value="pst"> Pacific Standard Time <br>
+    <input type="radio" name="timezone" value="ast"> Alaska Standard Time <br>
+    <input type="radio" name="timezone" value="hst"> Huawai Standard Time <br>
+
+    <button onclick="readForm()" type="button" value="Submit"> Submit </button>
+    </form>
+    <div id="Print"></div>
+
+<script type="text/javascript">
+var radioBtn = document.getElementsByName("timezone");
+//var radioBtn = document.getElementsByName("tine");
+var radioSlct = radioBtn[0].value;
+function readForm(){
+    
+    for (i=0; i<radioBtn.length; i++){
+        if (radioBtn[i].checked == true){
+            radioSlct = radioBtn[i].value
+            document.getElementById("Print").innerHTML = radioSlct;
+        }
+    }
+}
+</script>
+</body>
+</html>
