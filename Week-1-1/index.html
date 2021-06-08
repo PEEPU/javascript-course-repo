@@ -15,8 +15,23 @@
     <input type="radio" name="timezone" value="ast"> Alaska Standard Time <br>
     <input type="radio" name="timezone" value="hst"> Huawai Standard Time <br>
 
-<button type="button" value="Submit">Submit</button>
-</form>
-<div id="Print"></div>
+    <button onclick="readForm()" type="button" value="Submit"> Submit </button>
+    </form>
+    <div id="Print"></div>
+
+<script type="text/javascript">
+var radioBtn = document.getElementsByName("timezone");
+
+var radioSlct = radioBtn[0].value;
+function readForm(){
+    
+    for (i=0; i<radioBtn.length; i++){
+        if (radioBtn[i].checked == true){
+            radioSlct = radioBtn[i].value
+            document.getElementById("Print").innerHTML = radioSlct;
+        }
+    }
+}
+</script>
 </body>
 </html>
